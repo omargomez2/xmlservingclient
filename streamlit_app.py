@@ -9,3 +9,8 @@ import streamlit
 import pandas
 
 streamlit.title("List of Employees")
+
+feed_url = 'https://xmlserving.fly.dev/employees'
+df = pd.read_xml(feed_url)
+
+streamlit.dataframe(df)
