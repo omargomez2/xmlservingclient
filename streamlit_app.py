@@ -11,7 +11,8 @@ import requests
 import lxml
 
 res = requests.get('https://xmlserving.fly.dev/employees')
-doc = lxml.html.parse(res.content)
+streamlit.text(res.content)
+#doc = lxml.html.parse(res.content)
 
 #df = pd.read_xml('https://xmlserving.fly.dev/employees', xpath="./item")                               
 
