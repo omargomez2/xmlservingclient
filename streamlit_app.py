@@ -14,7 +14,7 @@ from xml.dom.minidom import parse
 
 
 usock = urllib.request.urlopen('https://xmlserving.fly.dev/employees') 
-streamlit.text(usock.content)
+streamlit.text(usock)
 xmldoc = parse(usock)                              
 usock.close()   
 
