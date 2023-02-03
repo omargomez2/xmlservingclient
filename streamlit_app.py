@@ -10,15 +10,13 @@ import xml.etree.ElementTree as et
 import pandas as pd
 import requests
 import xmltodict
-import urllib 
+import urllib2 
 import xml.dom.minidom
   
-docs = xml.dom.minidom.parse("https://xmlserving.fly.dev/employees")
-  
-print(docs.nodeName)
-print(docs.firstChild.tagName)
-
-                                         
+file = urllib2.urlopen('https://xmlserving.fly.dev/employees')
+data = file.read()
+file.close()
+                                  
 
 streamlit.title("List of Employees")
 
