@@ -13,7 +13,7 @@ from xml.dom.minidom import parse
 #response = requests.get('https://xmlserving.fly.dev/employees')
 
 
-usock = urllib.request.urlopen('https://xmlserving.fly.dev/employees') 
+usock = urllib.request.urlopen('https://xmlserving.fly.dev/employees', headers={"Accept":"application/xml"}) 
 streamlit.text(usock)
 xmldoc = parse(usock)                              
 usock.close()   
