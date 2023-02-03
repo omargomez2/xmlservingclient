@@ -8,6 +8,7 @@
 import streamlit
 import pandas as pd
 import requests
+import lxml
 
 res = requests.get('https://xmlserving.fly.dev/employees')
 doc = lxml.html.parse(res.content)
