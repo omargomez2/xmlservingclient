@@ -8,11 +8,11 @@
 import streamlit
 import pandas as pd
 import requests
-from xml.etree import ElementTree
+import xmltodict
 
 response = requests.get('https://xmlserving.fly.dev/employees')
 
-tree = ElementTree.fromstring(response.content)
+dict_data = xmltodict.parse(response.content)
 
 
 #res = requests.get('https://xmlserving.fly.dev/employees')
