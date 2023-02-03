@@ -12,7 +12,7 @@ import xmltodict
 
 response = requests.get('https://xmlserving.fly.dev/employees')
 
-import urllib 
+import urllib.request
 usock = urllib.urlopen('https://xmlserving.fly.dev/employees') 
 xmldoc = minidom.parse(usock)                              
 usock.close()   
