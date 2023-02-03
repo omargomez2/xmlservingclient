@@ -8,16 +8,14 @@
 import streamlit
 import xml.etree.ElementTree as et
 import pandas as pd
-
 import requests
 import xmltodict
-
 import urllib 
 
-feed_url = 'https://xmlserving.fly.dev/employees'
-usock = urllib.urlopen(feed_url)
-xmldoc = minidom.parse(usock)                              
-usock.close()                                              
+
+url = "https://xmlserving.fly.dev/employees"
+response = requests.get(url)
+data = xmltodict.parse(response.content)                                          
 
 streamlit.title("List of Employees")
 
