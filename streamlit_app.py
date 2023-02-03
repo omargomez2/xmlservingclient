@@ -7,20 +7,18 @@
 
 import streamlit
 import pandas as pd
-import urllib.request
-from xml.dom.minidom import parse
+import requests
+
+url = 'https://xmlserving.fly.dev/employees'
+response  = requests.get(url, headers = {"Accept":"application/xml"})
 
 #response = requests.get('https://xmlserving.fly.dev/employees')
 
-
-usock = urllib.request.urlopen('https://xmlserving.fly.dev/employees', headers={"Accept":"application/xml"}) 
-streamlit.text(usock)
-xmldoc = parse(usock)                              
-usock.close()   
+ 
 
 
 #res = requests.get('https://xmlserving.fly.dev/employees')
-#streamlit.text(res.content)
+streamlit.text(response.content)
 
 #doc = lxml.html.parse(res.content)
 
