@@ -2,3 +2,4 @@
 
 xmltodict
 urllib3
+xml.etree.ElementTree
