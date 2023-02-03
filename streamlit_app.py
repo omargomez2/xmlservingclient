@@ -13,7 +13,7 @@ import xmltodict
 import urllib3
 import xml.dom.minidom
   
-file = urllib2.urlopen('https://xmlserving.fly.dev/employees')
+file = urllib3.urlopen('https://xmlserving.fly.dev/employees')
 data = file.read()
 file.close()
                                   
