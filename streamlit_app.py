@@ -12,17 +12,9 @@ import requests
 url = 'https://xmlserving.fly.dev/employees'
 response  = requests.get(url, headers = {"Accept":"application/xml"})
 
-#response = requests.get('https://xmlserving.fly.dev/employees')
-
- 
-
-
-#res = requests.get('https://xmlserving.fly.dev/employees')
 streamlit.text(response.content)
 
-#doc = lxml.html.parse(res.content)
-
-#df = pd.read_xml('https://xmlserving.fly.dev/employees', xpath="./item")                               
+df = pd.read_xml(response)                               
 
 streamlit.title("List of Employees")
 
