@@ -8,6 +8,7 @@
 import streamlit
 import pandas as pd
 import urllib.request
+import parse
 
 #response = requests.get('https://xmlserving.fly.dev/employees')
 
