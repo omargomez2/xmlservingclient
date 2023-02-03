@@ -7,9 +7,12 @@
 
 import streamlit
 import pandas as pd
+import requests
 
+res = requests.get('https://xmlserving.fly.dev/employees')
+doc = lxml.html.parse(res.content)
 
-df = pd.read_xml('https://xmlserving.fly.dev/employees', xpath="./item")                               
+#df = pd.read_xml('https://xmlserving.fly.dev/employees', xpath="./item")                               
 
 streamlit.title("List of Employees")
 
