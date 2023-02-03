@@ -14,7 +14,7 @@ response  = requests.get(url, headers = {"Accept":"application/xml"})
 
 streamlit.text(response.content)
 
-df = pd.read_xml(response)                               
+df = pd.read_xml(response.content)                               
 
 streamlit.title("List of Employees")
 
