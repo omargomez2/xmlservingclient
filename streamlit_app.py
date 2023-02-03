@@ -8,10 +8,16 @@
 import streamlit
 import pandas as pd
 import requests
-import lxml
+from xml.etree import ElementTree
 
-res = requests.get('https://xmlserving.fly.dev/employees')
-streamlit.text(res.content)
+response = requests.get('https://xmlserving.fly.dev/employees')
+
+tree = ElementTree.fromstring(response.content)
+
+
+#res = requests.get('https://xmlserving.fly.dev/employees')
+#streamlit.text(res.content)
+
 #doc = lxml.html.parse(res.content)
 
 #df = pd.read_xml('https://xmlserving.fly.dev/employees', xpath="./item")                               
