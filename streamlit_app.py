@@ -12,10 +12,17 @@ import pandas as pd
 import requests
 import xmltodict
 
+import urllib 
+
 feed_url = 'https://xmlserving.fly.dev/employees'
 
-response = requests.get(feed_url)
-data = xmltodict.parse(response.content)
+usock = urllib.urlopen(feed_url)
+
+xmldoc = minidom.parse(usock)                              
+usock.close()                                              
+
+print xmldoc.toxml()
+
 
 
 streamlit.title("List of Employees")
