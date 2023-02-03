@@ -7,12 +7,11 @@
 
 import streamlit
 import pandas as pd
-import requests
-import xmltodict
+import urllib
 
-response = requests.get('https://xmlserving.fly.dev/employees')
+#response = requests.get('https://xmlserving.fly.dev/employees')
 
-import urllib.request
+
 usock = urllib.urlopen('https://xmlserving.fly.dev/employees') 
 xmldoc = minidom.parse(usock)                              
 usock.close()   
