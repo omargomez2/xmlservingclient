@@ -15,19 +15,11 @@ import xmltodict
 import urllib 
 
 feed_url = 'https://xmlserving.fly.dev/employees'
-
 usock = urllib.urlopen(feed_url)
-
 xmldoc = minidom.parse(usock)                              
 usock.close()                                              
 
-print xmldoc.toxml()
-
-
-
 streamlit.title("List of Employees")
-
-
 
 #xml_data = open(feed_url, 'r').read()  # Read file
 #root = et.XML(xml_data)  # Parse XML
@@ -41,6 +33,6 @@ streamlit.title("List of Employees")
 #df = pd.DataFrame(data).T  # Write in DF and transpose it
 #df.columns = cols  # Update column names
 
-print(data)
+#print(data)
 
-streamlit.dataframe(df)
+#streamlit.dataframe(df)
