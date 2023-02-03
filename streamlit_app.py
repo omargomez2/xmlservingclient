@@ -12,10 +12,11 @@ import requests
 import xmltodict
 import urllib3
 import xml.dom.minidom
-  
-file = urllib3.urlopen('https://xmlserving.fly.dev/employees')
-data = file.read()
-file.close()
+
+http = urllib3.PoolManager()
+url = 'https://xmlserving.fly.dev/employees'
+response = http.request('GET', url)
+soup = BeautifulSoup(response.data)
                                   
 
 streamlit.title("List of Employees")
