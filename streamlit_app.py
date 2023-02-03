@@ -6,19 +6,10 @@
 #-----------
 
 import streamlit
-import xml.etree.ElementTree as et
 import pandas as pd
-import requests
-import xmltodict
-import urllib3
-import xml.dom.minidom
 
-http = urllib3.PoolManager()
-url = 'https://xmlserving.fly.dev/employees'
-response = http.request('GET', url)
-print(response.data)
-print(response.status)
-                                  
+
+df = pd.read_xml('https://xmlserving.fly.dev/employees')                               
 
 streamlit.title("List of Employees")
 
