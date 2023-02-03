@@ -10,7 +10,7 @@ import xml.etree.ElementTree as et
 import pandas as pd
 import requests
 import xmltodict
-import urllib2 
+import urllib3
 import xml.dom.minidom
   
 file = urllib2.urlopen('https://xmlserving.fly.dev/employees')
