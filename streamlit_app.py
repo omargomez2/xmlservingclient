@@ -9,7 +9,7 @@ import streamlit
 import pandas as pd
 
 
-df = pd.read_xml('https://xmlserving.fly.dev/employees', xpath=".//item")                               
+df = pd.read_xml('https://xmlserving.fly.dev/employees', xpath="./item")                               
 
 streamlit.title("List of Employees")
 
