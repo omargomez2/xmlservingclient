@@ -11,11 +11,14 @@ import pandas as pd
 import requests
 import xmltodict
 import urllib 
+import xml.dom.minidom
+  
+docs = xml.dom.minidom.parse("https://xmlserving.fly.dev/employees")
+  
+print(docs.nodeName)
+print(docs.firstChild.tagName)
 
-
-url = "https://xmlserving.fly.dev/employees"
-response = requests.get(url)
-data = xmltodict.parse(response.content)                                          
+                                         
 
 streamlit.title("List of Employees")
 
