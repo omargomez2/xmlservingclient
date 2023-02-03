@@ -16,7 +16,8 @@ import xml.dom.minidom
 http = urllib3.PoolManager()
 url = 'https://xmlserving.fly.dev/employees'
 response = http.request('GET', url)
-soup = BeautifulSoup(response.data)
+print(response.data)
+print(response.status)
                                   
 
 streamlit.title("List of Employees")
