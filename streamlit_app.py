@@ -32,4 +32,4 @@ streamlit.title("List of Employees")
 
 #print(data)
 
-#streamlit.dataframe(df)
+streamlit.dataframe(df)
