@@ -9,7 +9,7 @@ import streamlit
 import requests
 import pandas as pd
 
-url = 'https://xmlserving.fly.dev/employees'
+url = 'https://xmlserver.fly.dev/employees'
 response  = requests.get(url, headers = {"Accept":"application/xml"})
 df = pd.read_xml(response.content)                               
 
