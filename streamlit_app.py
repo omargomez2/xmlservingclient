@@ -1,7 +1,7 @@
 #--------------------
 # 
 # Author: OG
-# Description: Streamlit app that consumes an xml document from url: https://xmlserving.fly.dev/employees
+# Description: Streamlit app that consumes an xml document from url: https://xmlserver.fly.dev/employees
 # url: https://omargomez2-xmlservingclient-streamlit-app-jd58e7.streamlit.app/
 #-----------
 
