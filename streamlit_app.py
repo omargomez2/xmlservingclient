@@ -9,8 +9,9 @@ import streamlit
 import requests
 import pandas as pd
 
-url = 'http://localhost:8080/employees'
-#url = 'https://xmlserver.fly.dev/employees'
+# In case of Streamlit be running on localhost 
+# url = 'http://localhost:8080/employees'
+url = 'https://xmlserver.fly.dev/employees'
 
 response  = requests.get(url, headers = {"Accept":"application/xml"})
 df = pd.read_xml(response.content)                               
